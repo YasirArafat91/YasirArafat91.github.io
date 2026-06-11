@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md Yasir Arafat — AI Researcher & Assistant Professor</title>
+<meta name="description" content="Md Yasir Arafat is an AI Researcher and Assistant Professor at Jashore University of Science and Technology, specializing in Deep Learning, Graph Neural Networks, Scientific Machine Learning, and Computer Vision.">
+<meta property="og:title" content="Md Yasir Arafat — AI Researcher">
+<meta property="og:description" content="AI Researcher specializing in Graph Neural Networks, Scientific Machine Learning, Deep Learning, and AI for Engineering Systems.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f1923;
+    --ink-soft: #3a4a5c;
+    --ink-muted: #6b7f94;
+    --rule: #dce4ed;
+    --surface: #f7f9fb;
+    --white: #ffffff;
+    --blue: #1a4fad;
+    --blue-light: #e8effe;
+    --accent: #0ea5e9;
+    --accent-dim: #bae6fd;
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'Inter', system-ui, sans-serif;
+    --display: 'Fraunces', Georgia, serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem; height: 56px;
+  }
+  .nav-brand { font-family: var(--mono); font-size: 0.85rem; font-weight: 500; color: var(--blue); letter-spacing: 0.01em; }
+  .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+  .nav-links a { font-size: 0.82rem; font-weight: 500; color: var(--ink-soft); text-decoration: none; letter-spacing: 0.02em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-cta { font-family: var(--mono); font-size: 0.78rem; background: var(--blue); color: white; padding: 0.4rem 1rem; border-radius: 4px; text-decoration: none; transition: opacity 0.2s; }
+  .nav-cta:hover { opacity: 0.85; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: all 0.3s; }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 0; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+  .section-label {
+    font-family: var(--mono); font-size: 0.72rem; font-weight: 500;
+    color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .section-title {
+    font-family: var(--display); font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 600; color: var(--ink); line-height: 1.15; margin-bottom: 1rem;
+  }
+  .section-sub { font-size: 1.05rem; color: var(--ink-soft); max-width: 600px; line-height: 1.7; margin-bottom: 3rem; }
+  hr.rule { border: none; border-top: 1px solid var(--rule); margin: 0; }
+
+  /* ── HERO ── */
+  #home {
+    padding-top: 96px; min-height: 100vh; display: flex; align-items: center;
+    background: linear-gradient(160deg, #f0f5ff 0%, #ffffff 55%, #f7fafe 100%);
+    position: relative; overflow: hidden;
+  }
+  #home::before {
+    content: ''; position: absolute; top: -200px; right: -200px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(14,165,233,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: var(--mono); font-size: 0.75rem; color: var(--blue);
+    background: var(--blue-light); border: 1px solid #c0d2f7;
+    padding: 0.25rem 0.75rem; border-radius: 100px; margin-bottom: 1.25rem;
+    letter-spacing: 0.06em;
+  }
+  .hero-eyebrow::before { content: '●'; font-size: 0.5rem; color: var(--accent); }
+  .hero-name {
+    font-family: var(--display); font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+    font-weight: 600; line-height: 1.05; color: var(--ink); margin-bottom: 0.6rem;
+  }
+  .hero-title { font-size: 1.15rem; font-weight: 500; color: var(--blue); margin-bottom: 0.4rem; }
+  .hero-affil { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 1.5rem; }
+  .hero-bio { font-size: 1.05rem; color: var(--ink-soft); line-height: 1.75; max-width: 560px; margin-bottom: 2rem; }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+  .tag {
+    font-family: var(--mono); font-size: 0.72rem; color: var(--blue);
+    background: var(--blue-light); border: 1px solid #c7d8f8;
+    padding: 0.2rem 0.65rem; border-radius: 4px; letter-spacing: 0.04em;
+  }
+  .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--blue); color: white; font-size: 0.88rem; font-weight: 600;
+    padding: 0.7rem 1.4rem; border-radius: 6px; text-decoration: none; transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.87; }
+  .btn-secondary {
+    border: 1.5px solid var(--rule); color: var(--ink-soft); background: white;
+    font-size: 0.88rem; font-weight: 500; padding: 0.7rem 1.3rem;
+    border-radius: 6px; text-decoration: none; transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
+  .hero-photo-wrap {
+    width: 220px; height: 220px; border-radius: 20px; overflow: hidden;
+    border: 3px solid var(--rule); box-shadow: 0 20px 60px rgba(26,79,173,0.12);
+    flex-shrink: 0; background: var(--blue-light);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-photo-placeholder {
+    width: 100%; height: 100%; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 0.5rem;
+    font-family: var(--mono); font-size: 0.7rem; color: var(--blue);
+  }
+  .hero-photo-placeholder svg { width: 64px; height: 64px; opacity: 0.35; }
+  .stats-row { display: flex; gap: 2.5rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+  .stat-item { text-align: left; }
+  .stat-num { font-family: var(--display); font-size: 1.9rem; font-weight: 600; color: var(--ink); line-height: 1; }
+  .stat-label { font-size: 0.78rem; color: var(--ink-muted); margin-top: 0.15rem; letter-spacing: 0.03em; }
+
+  /* ── ABOUT ── */
+  #about { background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 340px; gap: 4rem; align-items: start; }
+  .about-text p { font-size: 1.02rem; color: var(--ink-soft); line-height: 1.8; margin-bottom: 1.1rem; }
+  .edu-list { margin-top: 2rem; }
+  .edu-item { display: flex; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid var(--rule); }
+  .edu-item:last-child { border-bottom: none; }
+  .edu-year { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-muted); min-width: 90px; padding-top: 0.2rem; }
+  .edu-degree { font-weight: 600; color: var(--ink); font-size: 0.97rem; margin-bottom: 0.15rem; }
+  .edu-uni { font-size: 0.88rem; color: var(--blue); margin-bottom: 0.2rem; }
+  .edu-gpa { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-muted); }
+  .about-sidebar { }
+  .info-card {
+    background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem;
+  }
+  .info-card h4 { font-size: 0.8rem; font-weight: 600; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
+  .info-row { display: flex; justify-content: space-between; padding: 0.35rem 0; font-size: 0.87rem; border-bottom: 1px solid var(--rule); }
+  .info-row:last-child { border-bottom: none; }
+  .info-label { color: var(--ink-muted); font-size: 0.82rem; }
+  .info-val { color: var(--ink); font-weight: 500; font-size: 0.82rem; }
+  .interests-list { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+  /* ── RESEARCH ── */
+  #research { background: var(--surface); }
+  .research-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+  .research-card {
+    background: var(--white); border: 1px solid var(--rule); border-radius: 12px;
+    padding: 1.75rem; transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .research-card:hover { box-shadow: 0 8px 32px rgba(26,79,173,0.1); transform: translateY(-3px); }
+  .research-icon { width: 44px; height: 44px; background: var(--blue-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+  .research-icon svg { width: 22px; height: 22px; stroke: var(--blue); fill: none; stroke-width: 1.7; }
+  .research-card h3 { font-size: 1.05rem; font-weight: 600; color: var(--ink); margin-bottom: 0.6rem; }
+  .research-card p { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 1rem; }
+  .topic-list { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .topic-chip { font-family: var(--mono); font-size: 0.68rem; color: var(--ink-muted); background: var(--surface); border: 1px solid var(--rule); padding: 0.15rem 0.5rem; border-radius: 3px; }
+
+  /* ── PUBLICATIONS ── */
+  #publications { background: var(--white); }
+  .pub-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .filter-btn {
+    font-family: var(--mono); font-size: 0.72rem; padding: 0.3rem 0.8rem;
+    border-radius: 4px; border: 1px solid var(--rule); background: var(--white);
+    color: var(--ink-soft); cursor: pointer; transition: all 0.2s;
+  }
+  .filter-btn.active, .filter-btn:hover { background: var(--blue); border-color: var(--blue); color: white; }
+  .pub-list { display: flex; flex-direction: column; gap: 1.25rem; }
+  .pub-card {
+    border: 1px solid var(--rule); border-radius: 10px; padding: 1.5rem;
+    background: var(--white); transition: box-shadow 0.2s;
+    display: flex; gap: 1.25rem; align-items: flex-start;
+  }
+  .pub-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+  .pub-num { font-family: var(--mono); font-size: 0.82rem; color: var(--ink-muted); min-width: 24px; padding-top: 2px; }
+  .pub-title { font-size: 0.97rem; font-weight: 600; color: var(--ink); line-height: 1.45; margin-bottom: 0.35rem; }
+  .pub-authors { font-size: 0.83rem; color: var(--ink-soft); margin-bottom: 0.3rem; }
+  .pub-venue { font-size: 0.83rem; color: var(--blue); font-style: italic; margin-bottom: 0.6rem; }
+  .pub-year-tag { font-family: var(--mono); font-size: 0.68rem; background: var(--surface); border: 1px solid var(--rule); color: var(--ink-muted); padding: 0.15rem 0.45rem; border-radius: 3px; }
+  .pub-links { display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; align-items: center; }
+  .pub-link { font-size: 0.78rem; color: var(--blue); text-decoration: none; padding: 0.2rem 0.5rem; border: 1px solid #c0d2f7; border-radius: 4px; transition: all 0.2s; font-weight: 500; }
+  .pub-link:hover { background: var(--blue); color: white; border-color: var(--blue); }
+
+  /* ── PROJECTS ── */
+  #projects { background: var(--surface); }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+  .project-card {
+    background: var(--white); border: 1px solid var(--rule); border-radius: 12px;
+    overflow: hidden; transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .project-card:hover { box-shadow: 0 8px 32px rgba(26,79,173,0.1); transform: translateY(-3px); }
+  .project-header { padding: 1.5rem 1.5rem 1rem; border-bottom: 1px solid var(--rule); background: linear-gradient(135deg, var(--blue-light), #ffffff); }
+  .project-badge { font-family: var(--mono); font-size: 0.68rem; color: var(--blue); background: rgba(255,255,255,0.8); border: 1px solid #c0d2f7; padding: 0.15rem 0.55rem; border-radius: 100px; display: inline-block; margin-bottom: 0.6rem; }
+  .project-card h3 { font-size: 1rem; font-weight: 600; color: var(--ink); line-height: 1.35; }
+  .project-body { padding: 1.25rem 1.5rem; }
+  .project-body p { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 1rem; }
+  .project-meta { font-size: 0.78rem; color: var(--ink-muted); margin-bottom: 0.75rem; }
+  .project-meta span { font-weight: 500; color: var(--ink-soft); }
+  .tech-stack { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .tech-tag { font-family: var(--mono); font-size: 0.65rem; color: var(--ink-muted); background: var(--surface); border: 1px solid var(--rule); padding: 0.15rem 0.45rem; border-radius: 3px; }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--white); }
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(to bottom, var(--blue), var(--accent-dim)); border-radius: 2px; }
+  .timeline-item { position: relative; padding-bottom: 2.5rem; }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-dot { position: absolute; left: -2.45rem; top: 4px; width: 10px; height: 10px; background: var(--blue); border: 2px solid white; border-radius: 50%; box-shadow: 0 0 0 3px var(--blue-light); }
+  .tl-period { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-muted); margin-bottom: 0.25rem; }
+  .tl-role { font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 0.15rem; }
+  .tl-org { font-size: 0.9rem; color: var(--blue); margin-bottom: 0.5rem; }
+  .tl-desc { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.7; }
+
+  /* ── AWARDS ── */
+  #awards { background: var(--surface); }
+  .awards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .award-card {
+    background: var(--white); border: 1px solid var(--rule); border-radius: 10px;
+    padding: 1.25rem; display: flex; gap: 1rem; align-items: flex-start;
+  }
+  .award-icon { width: 38px; height: 38px; background: linear-gradient(135deg, var(--blue), var(--accent)); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .award-icon svg { width: 18px; height: 18px; stroke: white; fill: none; stroke-width: 2; }
+  .award-title { font-size: 0.92rem; font-weight: 600; color: var(--ink); line-height: 1.35; margin-bottom: 0.2rem; }
+  .award-year { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-muted); }
+
+  /* ── MEMBERSHIPS ── */
+  #memberships { background: var(--white); }
+  .memberships-list { display: flex; flex-direction: column; gap: 0.75rem; max-width: 680px; }
+  .member-row {
+    display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem;
+    border: 1px solid var(--rule); border-radius: 8px; background: var(--surface);
+    font-size: 0.92rem; color: var(--ink-soft);
+  }
+  .member-dot { width: 8px; height: 8px; background: var(--blue); border-radius: 50%; flex-shrink: 0; }
+
+  /* ── SKILLS ── */
+  #skills { background: var(--surface); }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+  .skill-group { background: var(--white); border: 1px solid var(--rule); border-radius: 12px; padding: 1.5rem; }
+  .skill-group h3 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-muted); margin-bottom: 1rem; }
+  .skill-item { display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--rule); }
+  .skill-item:last-child { border-bottom: none; }
+  .skill-name { font-size: 0.88rem; color: var(--ink); }
+  .skill-bar-wrap { width: 80px; height: 4px; background: var(--rule); border-radius: 2px; overflow: hidden; }
+  .skill-bar { height: 100%; background: linear-gradient(to right, var(--blue), var(--accent)); border-radius: 2px; }
+
+  /* ── CONTACT ── */
+  #contact { background: linear-gradient(160deg, #0f1923 0%, #1a3060 100%); color: white; }
+  #contact .section-label { color: var(--accent-dim); }
+  #contact .section-title { color: white; }
+  #contact .section-sub { color: rgba(255,255,255,0.6); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .contact-links { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
+  .contact-link {
+    display: flex; align-items: center; gap: 0.75rem; padding: 0.85rem 1.1rem;
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px; color: rgba(255,255,255,0.85); text-decoration: none;
+    font-size: 0.9rem; transition: background 0.2s;
+  }
+  .contact-link:hover { background: rgba(255,255,255,0.13); }
+  .contact-link svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 1.8; flex-shrink: 0; }
+  .contact-form-wrap { }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-bottom: 0.35rem; letter-spacing: 0.04em; }
+  .form-group input, .form-group textarea {
+    width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px; color: white; font-family: var(--sans); font-size: 0.9rem;
+    padding: 0.65rem 0.9rem; outline: none; transition: border-color 0.2s;
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.35); }
+  .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .btn-send {
+    background: var(--accent); color: white; font-size: 0.9rem; font-weight: 600;
+    padding: 0.75rem 1.75rem; border-radius: 6px; border: none; cursor: pointer;
+    transition: opacity 0.2s; width: 100%;
+  }
+  .btn-send:hover { opacity: 0.87; }
+
+  /* ── FOOTER ── */
+  footer { background: #080d13; color: rgba(255,255,255,0.35); text-align: center; padding: 1.5rem 2rem; font-size: 0.78rem; font-family: var(--mono); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-photo-wrap { width: 140px; height: 140px; margin-bottom: 1.5rem; order: -1; }
+    .stats-row { gap: 1.5rem; flex-wrap: wrap; }
+    .about-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    section { padding: 3.5rem 0; }
+    .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 56px; left: 0; right: 0; background: white; border-bottom: 1px solid var(--rule); padding: 1rem 2rem; gap: 1rem; }
+    .nav-cta.open { display: block; margin: 0 2rem 1rem; }
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-brand">md-yasir-arafat</span>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#" class="nav-cta" id="navCta" onclick="alert('Replace with link to your CV PDF')">CV ↓</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Assistant Professor · JUST, Bangladesh</div>
+        <h1 class="hero-name">Md Yasir Arafat</h1>
+        <p class="hero-title">AI Researcher &amp; Computer Engineer</p>
+        <p class="hero-affil">Dept. of Computer Science &amp; Engineering, Jashore University of Science and Technology</p>
+        <p class="hero-bio">Working at the intersection of Deep Learning, Graph Neural Networks, Scientific Machine Learning, and AI for Engineering Systems — advancing machine learning methods for complex scientific and real-world challenges.</p>
+        <div class="hero-tags">
+          <span class="tag">Graph Neural Networks</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Scientific ML</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">AI for Engineering</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#research" class="btn-primary">View Research</a>
+          <a href="#publications" class="btn-secondary">Publications</a>
+          <a href="#contact" class="btn-secondary">Contact</a>
+        </div>
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-num">6</div>
+            <div class="stat-label">Publications</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">2</div>
+            <div class="stat-label">Research Grants</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">6+</div>
+            <div class="stat-label">Years Teaching</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Memberships</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-placeholder">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#1a4fad" stroke-width="1.5">
+              <circle cx="32" cy="22" r="12"/>
+              <path d="M8 56c0-13.3 10.7-24 24-24s24 10.7 24 24"/>
+            </svg>
+            <span>Add Photo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label">About</p>
+    <h2 class="section-title">Academic Background</h2>
+    <div class="about-grid fade-in">
+      <div class="about-text">
+        <p>Md Yasir Arafat is an Assistant Professor in the Department of Computer Science and Engineering at Jashore University of Science and Technology (JUST), Bangladesh. With a strong foundation in both theoretical and applied machine learning, his work focuses on advancing AI methods for scientific and engineering challenges.</p>
+        <p>His research interests span Machine Learning, Deep Learning, Graph Neural Networks (GNNs), Graph Representation Learning, Recommendation Systems, Computer Vision, Scientific Machine Learning, and AI for Engineering Applications. He is actively engaged in developing intelligent systems that bridge the gap between data-driven learning and physical principles.</p>
+        <p>Beyond research, Arafat has contributed significantly to education — teaching courses in Artificial Intelligence, Machine Learning, Pattern Recognition, Computer Vision, and Bioinformatics at both undergraduate and Master's levels. He has guided numerous student theses and research projects.</p>
+        <p>He has undertaken advanced training at IIT Kharagpur and IIT Guwahati through the Bangladesh–Bharat Digital Service and Employment Training (BDSET) programme, working on ML/DL/AI and extended reality (XR) technologies. His internship under Prof. Pabitra Mitra focused on cross-lingual text summarization for Bangla–English language pairs.</p>
+
+        <div class="edu-list">
+          <h3 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-muted);font-weight:600;margin-bottom:0.75rem;">Education</h3>
+          <div class="edu-item">
+            <span class="edu-year">2013 – 2015</span>
+            <div>
+              <div class="edu-degree">M.Sc. in Computer Science and Engineering</div>
+              <div class="edu-uni">Jashore University of Science and Technology</div>
+              <div class="edu-gpa">CGPA: 3.82 / 4.00 &nbsp;·&nbsp; Position: 2nd</div>
+              <div style="font-size:0.83rem;color:var(--ink-soft);margin-top:0.3rem;">Thesis: Forecasting Civil Unrest Events with Future Time by Analyzing Social Media</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <span class="edu-year">2009 – 2012</span>
+            <div>
+              <div class="edu-degree">B.Sc. in Computer Science and Engineering</div>
+              <div class="edu-uni">Jashore University of Science and Technology</div>
+              <div class="edu-gpa">CGPA: 3.81 / 4.00 &nbsp;·&nbsp; Position: 2nd with Distinction</div>
+              <div style="font-size:0.83rem;color:var(--ink-soft);margin-top:0.3rem;">Thesis: Lossless Efficient Data Compression Techniques</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-sidebar">
+        <div class="info-card">
+          <h4>Quick Info</h4>
+          <div class="info-row"><span class="info-label">Position</span><span class="info-val">Assistant Professor</span></div>
+          <div class="info-row"><span class="info-label">Department</span><span class="info-val">CSE</span></div>
+          <div class="info-row"><span class="info-label">University</span><span class="info-val">JUST, Bangladesh</span></div>
+          <div class="info-row"><span class="info-label">Nationality</span><span class="info-val">Bangladeshi</span></div>
+        </div>
+        <div class="info-card">
+          <h4>Research Interests</h4>
+          <div class="interests-list">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Graph Neural Networks</span>
+            <span class="tag">Graph Representation</span>
+            <span class="tag">Recommendation Systems</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Scientific ML</span>
+            <span class="tag">AI for Engineering</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <h4>Connect</h4>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <a href="mailto:arafatcse@just.edu.bd" style="font-size:0.83rem;color:var(--blue);text-decoration:none;">✉ arafatcse@just.edu.bd</a>
+            <a href="https://just.edu.bd/t/arafatcse" target="_blank" style="font-size:0.83rem;color:var(--blue);text-decoration:none;">🌐 just.edu.bd/t/arafatcse</a>
+            <a href="https://www.researchgate.net/profile/Md-Arafat-3" target="_blank" style="font-size:0.83rem;color:var(--blue);text-decoration:none;">📄 ResearchGate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="container">
+    <p class="section-label">Research</p>
+    <h2 class="section-title">Research Areas</h2>
+    <p class="section-sub">Exploring the frontiers of machine learning applied to complex scientific, engineering, and real-world problems.</p>
+    <div class="research-grid fade-in">
+
+      <div class="research-card">
+        <div class="research-icon">
+          <svg viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="5" cy="12" r="2"/><line x1="5" y1="7" x2="5" y2="10"/><line x1="7" y1="5" x2="17" y2="5"/><line x1="19" y1="7" x2="14" y2="17"/><line x1="7" y1="12" x2="10" y2="12"/></svg>
+        </div>
+        <h3>Graph Neural Networks</h3>
+        <p>Advancing message-passing and graph-based representation learning for structured data. Exploring how graph architectures can capture relational and topological information in scientific domains.</p>
+        <div class="topic-list">
+          <span class="topic-chip">MeshGraphNets</span>
+          <span class="topic-chip">Graph Transformers</span>
+          <span class="topic-chip">Message Passing</span>
+          <span class="topic-chip">Geometric Deep Learning</span>
+          <span class="topic-chip">Graph Representation</span>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 3l7 7-4 4 11 7-7-11 4-4L3 3z"/></svg>
+        </div>
+        <h3>Scientific Machine Learning</h3>
+        <p>Developing AI-driven surrogate models and physics-aware learning systems that accelerate scientific simulation and encode physical principles within neural architectures.</p>
+        <div class="topic-list">
+          <span class="topic-chip">Physics-Informed Learning</span>
+          <span class="topic-chip">Surrogate Modeling</span>
+          <span class="topic-chip">PDE Learning</span>
+          <span class="topic-chip">Digital Twins</span>
+          <span class="topic-chip">Engineering Simulation</span>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Computer Vision</h3>
+        <p>Applying convolutional and transformer-based vision models to real-world classification, detection, and segmentation problems, including agricultural and biomedical image analysis.</p>
+        <div class="topic-list">
+          <span class="topic-chip">CNN Architectures</span>
+          <span class="topic-chip">Image Classification</span>
+          <span class="topic-chip">Object Detection</span>
+          <span class="topic-chip">YOLOv8</span>
+          <span class="topic-chip">Segmentation</span>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-icon">
+          <svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg>
+        </div>
+        <h3>Deep Learning</h3>
+        <p>Researching neural network architectures, transformer models, and self-supervised learning strategies for language understanding, sequence modeling, and structured prediction.</p>
+        <div class="topic-list">
+          <span class="topic-chip">Transformers</span>
+          <span class="topic-chip">RNNs / LSTMs</span>
+          <span class="topic-chip">Self-Supervised</span>
+          <span class="topic-chip">NLP</span>
+          <span class="topic-chip">Sequence Modeling</span>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>AI for Engineering</h3>
+        <p>Applying intelligent learning systems to engineering challenges including health monitoring, IoT integration, and industrial automation using machine learning pipelines.</p>
+        <div class="topic-list">
+          <span class="topic-chip">IoT + ML</span>
+          <span class="topic-chip">Health Monitoring</span>
+          <span class="topic-chip">Recommendation</span>
+          <span class="topic-chip">Industrial AI</span>
+          <span class="topic-chip">Smart Systems</span>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
+        </div>
+        <h3>Natural Language Processing</h3>
+        <p>Building extractive-abstractive summarization systems, cross-lingual models for Bangla–English language pairs, and computational methods for social media event analysis.</p>
+        <div class="topic-list">
+          <span class="topic-chip">Text Summarization</span>
+          <span class="topic-chip">Cross-Lingual NLP</span>
+          <span class="topic-chip">Social Media Analysis</span>
+          <span class="topic-chip">Event Forecasting</span>
+          <span class="topic-chip">Bangla NLP</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="container">
+    <p class="section-label">Publications</p>
+    <h2 class="section-title">Research Publications</h2>
+    <p class="section-sub">Peer-reviewed journal articles and conference contributions.</p>
+
+    <div class="pub-filters" id="pubFilters">
+      <button class="filter-btn active" data-year="all">All Years</button>
+      <button class="filter-btn" data-year="2025">2025</button>
+      <button class="filter-btn" data-year="2023">2023</button>
+      <button class="filter-btn" data-year="2022">2022</button>
+      <button class="filter-btn" data-year="2017">2017</button>
+      <button class="filter-btn" data-year="2016">2016</button>
+      <button class="filter-btn" data-year="2014">2014</button>
+    </div>
+
+    <div class="pub-list fade-in" id="pubList">
+
+      <div class="pub-card" data-year="2025">
+        <span class="pub-num">01</span>
+        <div>
+          <div class="pub-title">An Efficient Convolution Neural Network-based Novel Framework for Potato Leaf Diseases Classification and Identification</div>
+          <div class="pub-authors">Md Yasir Arafat, Sawrnali Khatun, Monishanker Halder, Mohammad Nowsin Amin Sheikh, Md Nasim Adnan, Sk Shalauddin Kabir</div>
+          <div class="pub-venue">IAENG International Journal of Computer Science, Vol. 52(7), 2025</div>
+          <div class="pub-links">
+            <span class="pub-year-tag">2025</span>
+            <span class="pub-year-tag" style="background:var(--blue-light);color:var(--blue);border-color:#c0d2f7;">Computer Vision</span>
+            <span class="pub-year-tag" style="background:var(--blue-light);color:var(--blue);border-color:#c0d2f7;">Deep Learning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-year="2023">
+        <span class="pub-num">02</span>
+        <div>
+          <div class="pub-title">Automatic Text Summarization Based on Extractive-Abstractive Method</div>
+          <div class="pub-authors">Md. Ahsan Habib, Romana Rahman Ema, Tajul Islam, Md. Yasir Arafat, Mahedi Hasan</div>
+          <div class="pub-venue">Radioelectronic and Computer Systems, Vol. 106(2), 2023</div>
+          <div class="pub-links">
+            <span class="pub-year-tag">2023</span>
+            <a class="pub-link" href="https://doi.org/10.32620/reks.2023.2.01" target="_blank">DOI</a>
+            <span class="pub-year-tag" style="background:var(--blue-light);color:var(--blue);border-color:#c0d2f7;">NLP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-year="2022">
+        <span class="pub-num">03</span>
+        <div>
+          <div class="pub-title">Protein Secondary Structure Prediction Using Hybrid Recurrent Neural Networks</div>
+          <div class="pub-authors">Romana Rahman Ema, A. Khatun, M. A. Hossain, Mostafijur Rahman Akhond, Nazmul Hossain, Md. Yasir Arafat</div>
+          <div class="pub-venue">Journal of Computer Science, Vol. 18(7), pp. 599–611, 2022</div>
+          <div class="pub-links">
+            <span class="pub-year-tag">2022</span>
+            <a class="pub-link" href="https://doi.org/10.3844/jcssp.2022.599.611" target="_blank">DOI</a>
+            <span class="pub-year-tag" style="background:var(--blue-light);color:var(--blue);border-color:#c0d2f7;">Deep Learning</span>
+            <span class="pub-year-tag" style="background:var(--blue-light);color:var(--blue);border-color:#c0d2f7;">Bioinformatics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-year="2017">
+        <span class="pub-num">04</span>
+        <div>
+          <div class="pub-title">Technical Challenges of Cloud Forensics and Suggested Solutions</div>
+          <div class="pub-authors">Md. Yasir Arafat, Bipasha Mondal, Sreeti Rani</div>
+          <div class="pub-venue">International Journal of Scientific and Engineering Research, Vol. 8(8), 2017</div>
+          <div class="pub-links">
+            <span class="pub-year-tag">2017</span>
+            <a class="pub-link" href="https://doi.org/10.14299/ijser.2017.08.004" target="_blank">DOI</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-year="2016">
+        <span class="pub-num">05</span>
+        <div>
+          <div class="pub-title">JUSTCE: A Secured and Reliable E-Learning Portal</div>
+          <div class="pub-authors">Md. Kamrul Islam, Md. Yasir Arafat, Ahsan-Ul Ambia</div>
+          <div class="pub-venue">International Journal of Scientific and Engineering Research, Vol. 7(7), 2016</div>
+          <div class="pub-links">
+            <span class="pub-year-tag">2016</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-year="2014">
+        <span class="pub-num">06</span>
+        <div>
+          <div class="pub-title">Redundant Reduced LZW (RRLZW) Technique of Lossless Data Compression</div>
+          <div class="pub-authors">Md. Kamrul Islam, Md. Yasir Arafat</div>
+          <div class="pub-venue">International Journal of Advanced Research in Computer Science, Vol. 5(6), 2014</div>
+          <div class="pub-links">
+            <span class="pub-year-tag">2014</span>
+            <span class="pub-year-tag" style="background:var(--blue-light);color:var(--blue);border-color:#c0d2f7;">Algorithms</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <p class="section-label">Projects</p>
+    <h2 class="section-title">Research Projects</h2>
+    <p class="section-sub">Funded research initiatives and applied AI development work.</p>
+    <div class="projects-grid fade-in">
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-badge">PI · Funded Research</span>
+          <h3>IoT-Based Health Monitoring System with Fitness &amp; Diet Recommendation</h3>
+        </div>
+        <div class="project-body">
+          <p>Designed and led a machine learning-driven health monitoring system integrating IoT sensors with personalized fitness and dietary recommendation algorithms. The system enables real-time health data collection and intelligent adaptive recommendations.</p>
+          <div class="project-meta">
+            <div><span>Funding Agency:</span> Jashore University of Science and Technology</div>
+            <div><span>Grant Amount:</span> 150,000 BDT (~$1,250 USD)</div>
+            <div><span>Period:</span> July 2023 – June 2024</div>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">IoT</span>
+            <span class="tech-tag">Machine Learning</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Health AI</span>
+            <span class="tech-tag">Recommendation Systems</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-badge">SPMT · HEQEP Funded</span>
+          <h3>Integration of IT Facilities in Teaching-Learning Activities</h3>
+        </div>
+        <div class="project-body">
+          <p>Sub-Project Management Team member for a large-scale ICT integration initiative at the Department of Environmental Science and Technology, funded by the University Grant Commission of Bangladesh under the HEQEP project.</p>
+          <div class="project-meta">
+            <div><span>Funding Agency:</span> HEQEP / University Grant Commission, Bangladesh</div>
+            <div><span>Grant Amount:</span> 1.21 crore BDT (~$121,000 USD)</div>
+            <div><span>Period:</span> May 2017 – April 2018</div>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">ICT</span>
+            <span class="tech-tag">e-Learning</span>
+            <span class="tech-tag">Educational Technology</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-badge">Research · Computer Vision</span>
+          <h3>Potato Leaf Disease Classification Framework</h3>
+        </div>
+        <div class="project-body">
+          <p>Developed a CNN-based framework for automated classification and identification of potato leaf diseases from digital images, contributing to AI-driven precision agriculture solutions.</p>
+          <div class="project-meta">
+            <div><span>Status:</span> Published (IAENG IJCS, 2025)</div>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">CNN</span>
+            <span class="tech-tag">Computer Vision</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">YOLOv8</span>
+            <span class="tech-tag">Agricultural AI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-badge">Research · NLP</span>
+          <h3>Cross-Language Text Summarization (Bangla–English)</h3>
+        </div>
+        <div class="project-body">
+          <p>Internship research project at IIT Kharagpur under Prof. Pabitra Mitra, focusing on cross-lingual extractive-abstractive summarization for Bangla–English language pairs, contributing to low-resource NLP research.</p>
+          <div class="project-meta">
+            <div><span>Supervisor:</span> Prof. Pabitra Mitra, IIT Kharagpur</div>
+            <div><span>Period:</span> December 2022 – January 2023</div>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">NLP</span>
+            <span class="tech-tag">Summarization</span>
+            <span class="tech-tag">Bangla</span>
+            <span class="tech-tag">Transformer</span>
+            <span class="tech-tag">Python</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-badge">M.Sc. Thesis</span>
+          <h3>Civil Unrest Event Forecasting via Social Media</h3>
+        </div>
+        <div class="project-body">
+          <p>Developed a novel ML pipeline to filter civil unrest-related Twitter content using keyword dictionaries and machine learning, then forecast future event dates, times, and locations using geolocation analysis on streaming data.</p>
+          <div class="project-meta">
+            <div><span>Supervisor:</span> Engr. Md. Arif Rahman</div>
+            <div><span>Period:</span> 2013 – 2015</div>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Machine Learning</span>
+            <span class="tech-tag">NLP</span>
+            <span class="tech-tag">Twitter API</span>
+            <span class="tech-tag">Geolocation</span>
+            <span class="tech-tag">Event Detection</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-badge">B.Sc. Thesis</span>
+          <h3>Redundant Reduced LZW (RRLZW) Data Compression</h3>
+        </div>
+        <div class="project-body">
+          <p>Designed and evaluated a novel lossless data compression technique building on the LZW dictionary method, achieving improved compression ratios on textual data compared to standard approaches.</p>
+          <div class="project-meta">
+            <div><span>Supervisor:</span> Md. Kamrul Islam, PhD</div>
+            <div><span>Period:</span> 2009 – 2012</div>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Algorithms</span>
+            <span class="tech-tag">Data Compression</span>
+            <span class="tech-tag">LZW</span>
+            <span class="tech-tag">Huffman</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Experience</p>
+    <h2 class="section-title">Professional Timeline</h2>
+    <p class="section-sub">Academic and industry positions shaping a research career at the intersection of AI and education.</p>
+    <div class="timeline fade-in">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-period">April 2018 – Present</div>
+        <div class="tl-role">Assistant Professor</div>
+        <div class="tl-org">Dept. of Computer Science &amp; Engineering, Jashore University of Science and Technology</div>
+        <div class="tl-desc">Teaching AI, Machine Learning, Pattern Recognition, Computer Vision, and Bioinformatics. Supervising undergraduate and Master's-level research projects and theses. Leading funded research on IoT and ML systems. Serving as BSc Examination Committee Chairman and ICT Cell Additional Director.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-period">September 2014 – April 2018</div>
+        <div class="tl-role">Lecturer</div>
+        <div class="tl-org">Dept. of Computer Science &amp; Engineering, Jashore University of Science and Technology</div>
+        <div class="tl-desc">Taught Computer Fundamentals, Programming, Data Structures and Algorithms, Algorithm Analysis and Design, Digital Logic Design, and Microprocessor courses. Supervised undergraduate project and thesis work.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-period">February 2014 – September 2014</div>
+        <div class="tl-role">.NET Programmer</div>
+        <div class="tl-org">SOFTWORKS Ltd.</div>
+        <div class="tl-desc">Developed ERP systems using .NET technologies for the garment dyeing industry and built Medicine Warehouse Inventory Management Systems as part of an agile development team.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-period">April 2013 – January 2014</div>
+        <div class="tl-role">Junior .NET Developer</div>
+        <div class="tl-org">AutoInformatik.AG</div>
+        <div class="tl-desc">In-house software development and testing using ASP.NET and desktop application frameworks. Contributed to core business application development.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="container">
+    <p class="section-label">Recognition</p>
+    <h2 class="section-title">Awards &amp; Scholarships</h2>
+    <p class="section-sub">Academic recognition, merit scholarships, and professional distinctions.</p>
+    <div class="awards-grid fade-in">
+
+      <div class="award-card">
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div>
+          <div class="award-title">BDSET Scholarship</div>
+          <div class="award-year">2022 – 2023 · ICT Division, Bangladesh</div>
+        </div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div>
+          <div class="award-title">Jashore Education Board Scholarship</div>
+          <div class="award-year">2008 – 2012 · Jashore, Bangladesh</div>
+        </div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div>
+          <div class="award-title">Grameen Bank Scholarship</div>
+          <div class="award-year">April 2007 · For SSC Result, Bangladesh</div>
+        </div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <div>
+          <div class="award-title">Best Student Award – Class X</div>
+          <div class="award-year">2005 · Science, Basundia High School, Jashore</div>
+        </div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <div class="award-title">Inter Disciplinary Debate Competition</div>
+          <div class="award-year">2010 · Jashore University of Science and Technology</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- MEMBERSHIPS -->
+<section id="memberships">
+  <div class="container">
+    <p class="section-label">Professional</p>
+    <h2 class="section-title">Memberships</h2>
+    <p class="section-sub">Active participation in professional engineering and research communities.</p>
+    <div class="memberships-list fade-in">
+      <div class="member-row"><span class="member-dot"></span>Member, International Association of Engineers (IAENG), Hong Kong</div>
+      <div class="member-row"><span class="member-dot"></span>Member, Internet Society Bangladesh Dhaka Chapter</div>
+      <div class="member-row"><span class="member-dot"></span>Member, JUST Teachers' Association, Jashore University of Science &amp; Technology, Bangladesh</div>
+      <div class="member-row"><span class="member-dot"></span>Member, CSE Club, Dept. of Computer Science and Engineering, JUST, Bangladesh</div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label">Skills</p>
+    <h2 class="section-title">Technical Expertise</h2>
+    <p class="section-sub">A broad toolkit spanning AI research, scientific computing, software development, and academic tools.</p>
+    <div class="skills-grid fade-in">
+
+      <div class="skill-group">
+        <h3>AI &amp; Machine Learning</h3>
+        <div class="skill-item"><span class="skill-name">Deep Learning (CNNs, RNNs)</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Graph Neural Networks</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Computer Vision (YOLOv8, SVM)</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:82%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">NLP &amp; Text Summarization</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:78%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Recommendation Systems</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:75%"></div></div></div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Programming</h3>
+        <div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">C# / .NET</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:80%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">C / C++</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:75%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">MATLAB</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:72%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">JavaScript / PHP / HTML5</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:68%"></div></div></div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Tools &amp; Platforms</h3>
+        <div class="skill-item"><span class="skill-name">Jupyter Notebook</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">MATLAB / Simulink</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:72%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Unity / Blender (XR)</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:60%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Arduino / IoT</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:65%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">LaTeX</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div></div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Databases &amp; Web</h3>
+        <div class="skill-item"><span class="skill-name">MySQL</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:82%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">MS SQL Server</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:78%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">ASP.NET / MVC</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:78%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Oracle / SQLite</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:65%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">IIS / XAMPP</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:60%"></div></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-sub">Open to research collaborations, academic discussions, and opportunities in AI research.</p>
+    <div class="contact-grid fade-in">
+      <div>
+        <div class="contact-links">
+          <a href="mailto:arafatcse@just.edu.bd" class="contact-link">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            arafatcse@just.edu.bd
+          </a>
+          <a href="mailto:arafat.cse.just@gmail.com" class="contact-link">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            arafat.cse.just@gmail.com
+          </a>
+          <a href="https://just.edu.bd/t/arafatcse" target="_blank" class="contact-link">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+            University Profile
+          </a>
+          <a href="https://www.researchgate.net/profile/Md-Arafat-3" target="_blank" class="contact-link">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h8M12 8v8"/></svg>
+            ResearchGate
+          </a>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <div class="form-group">
+          <label>NAME</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label>EMAIL</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label>MESSAGE</label>
+          <textarea placeholder="Research collaboration, academic inquiry, or just hello..."></textarea>
+        </div>
+        <button class="btn-send" onclick="alert('Please configure this form with a service like Formspree or EmailJS.')">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 Md Yasir Arafat · Jashore University of Science and Technology · Built for GitHub Pages</span>
+</footer>
+
+<script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  const navCta = document.getElementById('navCta');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    navCta.classList.toggle('open');
+  });
+
+  // Publication year filter
+  document.getElementById('pubFilters').addEventListener('click', e => {
+    if (!e.target.matches('.filter-btn')) return;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    const year = e.target.dataset.year;
+    document.querySelectorAll('.pub-card').forEach(card => {
+      card.style.display = (year === 'all' || card.dataset.year === year) ? 'flex' : 'none';
+    });
+  });
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
