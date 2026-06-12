@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Md Yasir Arafat — AI Researcher & Assistant Professor</title>
-<meta name="description" content="Md Yasir Arafat is an AI Researcher and Assistant Professor at Jashore University of Science and Technology, specializing in Deep Learning, Graph Neural Networks, Scientific Machine Learning, and Computer Vision.">
-<meta property="og:title" content="Md Yasir Arafat — AI Researcher">
-<meta property="og:description" content="AI Researcher specializing in Graph Neural Networks, Scientific Machine Learning, Deep Learning, and AI for Engineering Systems.">
+<title>Md Yasir Arafat — PhD Researcher, CRIL · Université d'Artois</title>
+<meta name="description" content="Md Yasir Arafat is a PhD Researcher at CRIL, Université d'Artois, France, and Assistant Professor at JUST, Bangladesh. Specializing in Graph Neural Networks, 3D Mesh-Based Learning, and Scientific Machine Learning.">
+<meta property="og:title" content="Md Yasir Arafat — PhD Researcher in Graph Neural Networks">
+<meta property="og:description" content="PhD Researcher at CRIL, Université d'Artois — GNNs for non-uniform 3D objects, mesh-based learning, and Scientific Machine Learning.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&display=swap" rel="stylesheet">
@@ -304,19 +304,79 @@
   /* ── ANIMATIONS ── */
   .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── PEER REVIEW ── */
+  #reviews { background: var(--white); }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; }
+  .review-card {
+    border: 1px solid var(--rule); border-radius: 12px; overflow: hidden;
+    background: var(--white); transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .review-card:hover { box-shadow: 0 8px 32px rgba(26,79,173,0.10); transform: translateY(-3px); }
+  .review-card-header {
+    padding: 1.1rem 1.4rem 0.9rem;
+    background: linear-gradient(135deg, #f0f5ff 0%, #ffffff 100%);
+    border-bottom: 1px solid var(--rule);
+    display: flex; align-items: flex-start; gap: 0.9rem;
+  }
+  .review-icon {
+    width: 40px; height: 40px; background: var(--blue); border-radius: 9px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .review-icon svg { width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 1.8; }
+  .review-venue { font-size: 0.95rem; font-weight: 600; color: var(--ink); line-height: 1.35; }
+  .review-venue-abbr { font-family: var(--mono); font-size: 0.7rem; color: var(--blue); margin-top: 0.2rem; letter-spacing: 0.04em; }
+  .review-card-body { padding: 1.1rem 1.4rem 1.25rem; }
+  .review-stat { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.6rem; }
+  .review-count {
+    font-family: var(--display); font-size: 2rem; font-weight: 600;
+    color: var(--blue); line-height: 1;
+  }
+  .review-count-label { font-size: 0.83rem; color: var(--ink-soft); line-height: 1.4; }
+  .review-count-label strong { display: block; color: var(--ink); font-size: 0.88rem; }
+  .review-year-badge {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    font-family: var(--mono); font-size: 0.68rem; color: var(--ink-muted);
+    background: var(--surface); border: 1px solid var(--rule);
+    padding: 0.15rem 0.55rem; border-radius: 4px; margin-top: 0.5rem;
+  }
+  .review-cert-note {
+    font-size: 0.78rem; color: var(--ink-muted); line-height: 1.55;
+    margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--rule);
+    font-style: italic;
+  }
+  .review-link {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    font-size: 0.78rem; color: var(--blue); text-decoration: none;
+    font-weight: 500; margin-top: 0.6rem;
+    border: 1px solid #c0d2f7; padding: 0.2rem 0.6rem; border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .review-link:hover { background: var(--blue); color: white; border-color: var(--blue); }
+  .review-summary-bar {
+    display: flex; gap: 2rem; padding: 1.5rem 2rem;
+    background: var(--blue-light); border: 1px solid #c0d2f7;
+    border-radius: 12px; margin-bottom: 2.5rem; flex-wrap: wrap; align-items: center;
+  }
+  .review-summary-item { text-align: center; }
+  .review-summary-num { font-family: var(--display); font-size: 2rem; font-weight: 600; color: var(--blue); line-height: 1; }
+  .review-summary-lbl { font-size: 0.75rem; color: var(--ink-muted); margin-top: 0.2rem; letter-spacing: 0.03em; }
+  .review-summary-divider { width: 1px; background: #c0d2f7; align-self: stretch; }
+  .review-summary-desc { flex: 1; min-width: 220px; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.65; }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <span class="nav-brand">md-yasir-arafat</span>
+  <span class="nav-brand">yasir-arafat · cril</span>
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#" class="nav-cta" id="navCta" onclick="alert('Replace with link to your CV PDF')">CV ↓</a>
@@ -330,20 +390,22 @@
   <div class="container">
     <div class="hero-grid">
       <div class="hero-content">
-        <div class="hero-eyebrow">Assistant Professor · JUST, Bangladesh</div>
+        <div class="hero-eyebrow">PhD Researcher · CRIL, Université d'Artois, France</div>
         <h1 class="hero-name">Md Yasir Arafat</h1>
-        <p class="hero-title">AI Researcher &amp; Computer Engineer</p>
-        <p class="hero-affil">Dept. of Computer Science &amp; Engineering, Jashore University of Science and Technology</p>
-        <p class="hero-bio">Working at the intersection of Deep Learning, Graph Neural Networks, Scientific Machine Learning, and AI for Engineering Systems — advancing machine learning methods for complex scientific and real-world challenges.</p>
+        <p class="hero-title">PhD Researcher in Graph Neural Networks &amp; 3D Mesh Learning</p>
+        <p class="hero-affil"><a href="https://www.cril.univ-artois.fr/phds/arafat/" target="_blank" style="color:var(--blue);text-decoration:none;">CRIL – Centre de Recherche en Informatique de Lens</a>, Université d'Artois, France &nbsp;·&nbsp; Assistant Professor, JUST, Bangladesh</p>
+        <p class="hero-bio">Working at the intersection of Graph Neural Networks, 3D Mesh-Based Learning, and Scientific Machine Learning. My PhD explores GNNs for non-uniform 3D objects — including mesh pooling strategies, graph construction from 3D meshes, and temporal GNN applications in fluid simulation, weather modelling, and physical simulation.</p>
         <div class="hero-tags">
           <span class="tag">Graph Neural Networks</span>
+          <span class="tag">3D Mesh Learning</span>
           <span class="tag">Deep Learning</span>
           <span class="tag">Scientific ML</span>
           <span class="tag">Computer Vision</span>
           <span class="tag">AI for Engineering</span>
         </div>
         <div class="hero-actions">
-          <a href="#research" class="btn-primary">View Research</a>
+          <a href="https://www.cril.univ-artois.fr/phds/arafat/" target="_blank" class="btn-primary">PhD at CRIL →</a>
+          <a href="#research" class="btn-secondary">Research</a>
           <a href="#publications" class="btn-secondary">Publications</a>
           <a href="#contact" class="btn-secondary">Contact</a>
         </div>
@@ -353,16 +415,16 @@
             <div class="stat-label">Publications</div>
           </div>
           <div class="stat-item">
+            <div class="stat-num">2024</div>
+            <div class="stat-label">PhD Start Year</div>
+          </div>
+          <div class="stat-item">
             <div class="stat-num">2</div>
             <div class="stat-label">Research Grants</div>
           </div>
           <div class="stat-item">
             <div class="stat-num">6+</div>
             <div class="stat-label">Years Teaching</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">4</div>
-            <div class="stat-label">Memberships</div>
           </div>
         </div>
       </div>
@@ -384,13 +446,22 @@
     <h2 class="section-title">Academic Background</h2>
     <div class="about-grid fade-in">
       <div class="about-text">
-        <p>Md Yasir Arafat is an Assistant Professor in the Department of Computer Science and Engineering at Jashore University of Science and Technology (JUST), Bangladesh. With a strong foundation in both theoretical and applied machine learning, his work focuses on advancing AI methods for scientific and engineering challenges.</p>
-        <p>His research interests span Machine Learning, Deep Learning, Graph Neural Networks (GNNs), Graph Representation Learning, Recommendation Systems, Computer Vision, Scientific Machine Learning, and AI for Engineering Applications. He is actively engaged in developing intelligent systems that bridge the gap between data-driven learning and physical principles.</p>
-        <p>Beyond research, Arafat has contributed significantly to education — teaching courses in Artificial Intelligence, Machine Learning, Pattern Recognition, Computer Vision, and Bioinformatics at both undergraduate and Master's levels. He has guided numerous student theses and research projects.</p>
+        <p>Md Yasir Arafat is a PhD Researcher at the <a href="https://www.cril.univ-artois.fr/" target="_blank" style="color:var(--blue);text-decoration:none;">Centre de Recherche en Informatique de Lens (CRIL)</a>, Université d'Artois, France, where he began his doctoral studies in 2024. His thesis — <em>"Apprentissage sur des objets 3D non-uniformes : une méthode basée sur les graphes"</em> (Learning on Non-Uniform 3D Objects: A Graph-Based Method) — is supervised by <a href="https://www.cril.univ-artois.fr/members/jabbour/" target="_blank" style="color:var(--blue);text-decoration:none;">Prof. Saïd Jabbour</a> and co-supervised by <a href="https://www.cril.univ-artois.fr/members/inoubli/" target="_blank" style="color:var(--blue);text-decoration:none;">Dr. Wissem Inoubli</a>, funded by Université d'Artois.</p>
+        <p>His PhD research focuses on Graph Neural Networks (GNNs) for modelling non-uniform 3D objects such as 3D meshes, addressing scalability challenges through mesh-specific pooling strategies and graph construction methods. The work extends to temporal GNN applications in fluid simulation, weather modelling, and physical 3D mesh simulation.</p>
+        <p>In parallel, he holds the position of Assistant Professor in the Department of Computer Science and Engineering at Jashore University of Science and Technology (JUST), Bangladesh. He teaches Artificial Intelligence, Machine Learning, Pattern Recognition, Computer Vision, and Bioinformatics, and has supervised numerous undergraduate and Master's-level research projects.</p>
         <p>He has undertaken advanced training at IIT Kharagpur and IIT Guwahati through the Bangladesh–Bharat Digital Service and Employment Training (BDSET) programme, working on ML/DL/AI and extended reality (XR) technologies. His internship under Prof. Pabitra Mitra focused on cross-lingual text summarization for Bangla–English language pairs.</p>
 
         <div class="edu-list">
           <h3 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-muted);font-weight:600;margin-bottom:0.75rem;">Education</h3>
+          <div class="edu-item">
+            <span class="edu-year">2024 – Present</span>
+            <div>
+              <div class="edu-degree" style="display:flex;align-items:center;gap:0.5rem;">PhD in Computer Science <span style="font-family:var(--mono);font-size:0.65rem;background:var(--blue);color:white;padding:0.1rem 0.45rem;border-radius:100px;">Current</span></div>
+              <div class="edu-uni"><a href="https://www.cril.univ-artois.fr/phds/arafat/" target="_blank" style="color:var(--blue);text-decoration:none;">CRIL, Université d'Artois, France</a></div>
+              <div class="edu-gpa">Supervisor: Saïd Jabbour &nbsp;·&nbsp; Co-supervisor: Wissem Inoubli &nbsp;·&nbsp; Funding: Artois</div>
+              <div style="font-size:0.83rem;color:var(--ink-soft);margin-top:0.3rem;font-style:italic;">Thesis: Learning on Non-Uniform 3D Objects: A Graph-Based Method</div>
+            </div>
+          </div>
           <div class="edu-item">
             <span class="edu-year">2013 – 2015</span>
             <div>
@@ -415,9 +486,13 @@
       <div class="about-sidebar">
         <div class="info-card">
           <h4>Quick Info</h4>
-          <div class="info-row"><span class="info-label">Position</span><span class="info-val">Assistant Professor</span></div>
-          <div class="info-row"><span class="info-label">Department</span><span class="info-val">CSE</span></div>
-          <div class="info-row"><span class="info-label">University</span><span class="info-val">JUST, Bangladesh</span></div>
+          <div class="info-row"><span class="info-label">Status</span><span class="info-val">PhD Researcher</span></div>
+          <div class="info-row"><span class="info-label">Lab</span><span class="info-val">CRIL, Artois</span></div>
+          <div class="info-row"><span class="info-label">PhD Start</span><span class="info-val">2024</span></div>
+          <div class="info-row"><span class="info-label">Supervisor</span><span class="info-val">Saïd Jabbour</span></div>
+          <div class="info-row"><span class="info-label">Co-supervisor</span><span class="info-val">Wissem Inoubli</span></div>
+          <div class="info-row"><span class="info-label">Funding</span><span class="info-val">Université d'Artois</span></div>
+          <div class="info-row"><span class="info-label">Also</span><span class="info-val">Asst. Prof., JUST</span></div>
           <div class="info-row"><span class="info-label">Nationality</span><span class="info-val">Bangladeshi</span></div>
         </div>
         <div class="info-card">
@@ -437,7 +512,8 @@
           <h4>Connect</h4>
           <div style="display:flex;flex-direction:column;gap:0.5rem;">
             <a href="mailto:arafatcse@just.edu.bd" style="font-size:0.83rem;color:var(--blue);text-decoration:none;">✉ arafatcse@just.edu.bd</a>
-            <a href="https://just.edu.bd/t/arafatcse" target="_blank" style="font-size:0.83rem;color:var(--blue);text-decoration:none;">🌐 just.edu.bd/t/arafatcse</a>
+            <a href="https://www.cril.univ-artois.fr/phds/arafat/" target="_blank" style="font-size:0.83rem;color:var(--blue);text-decoration:none;">🔬 CRIL PhD Page</a>
+            <a href="https://just.edu.bd/t/arafatcse" target="_blank" style="font-size:0.83rem;color:var(--blue);text-decoration:none;">🌐 JUST Profile</a>
             <a href="https://www.researchgate.net/profile/Md-Arafat-3" target="_blank" style="font-size:0.83rem;color:var(--blue);text-decoration:none;">📄 ResearchGate</a>
           </div>
         </div>
@@ -456,18 +532,52 @@
     <p class="section-sub">Exploring the frontiers of machine learning applied to complex scientific, engineering, and real-world problems.</p>
     <div class="research-grid fade-in">
 
+      <!-- PhD THESIS — featured full-width card -->
+      <div class="research-card" style="border-color:#c0d2f7;background:linear-gradient(135deg,#f0f5ff,#ffffff);grid-column:1/-1;">
+        <div style="display:flex;align-items:flex-start;gap:1.25rem;flex-wrap:wrap;">
+          <div class="research-icon" style="background:var(--blue);flex-shrink:0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h8M12 8v8"/></svg>
+          </div>
+          <div style="flex:1;min-width:240px;">
+            <div style="font-family:var(--mono);font-size:0.7rem;color:var(--blue);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.4rem;">PhD Thesis · CRIL, Université d'Artois · 2024 – Present</div>
+            <h3 style="font-size:1.08rem;margin-bottom:0.35rem;">Apprentissage sur des objets 3D non-uniformes : une méthode basée sur les graphes</h3>
+            <p style="font-size:0.88rem;color:var(--ink-muted);font-style:italic;margin-bottom:0.75rem;">"Learning on Non-Uniform 3D Objects: A Graph-Based Method"</p>
+            <p style="font-size:0.9rem;color:var(--ink-soft);line-height:1.7;margin-bottom:1rem;">This thesis explores GNNs for modelling non-uniform 3D objects such as 3D meshes. It addresses scalability challenges through mesh-specific pooling strategies and graph construction methods, and extends to temporal GNN applications in fluid simulation, weather modelling, and physical 3D mesh simulation.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;font-size:0.83rem;color:var(--ink-soft);margin-bottom:1rem;">
+              <span><strong>Supervisor:</strong> <a href="https://www.cril.univ-artois.fr/members/jabbour/" target="_blank" style="color:var(--blue);text-decoration:none;">Saïd Jabbour</a></span>
+              <span><strong>Co-supervisor:</strong> <a href="https://www.cril.univ-artois.fr/members/inoubli/" target="_blank" style="color:var(--blue);text-decoration:none;">Wissem Inoubli</a></span>
+              <span><strong>Funding:</strong> Université d'Artois</span>
+              <span><strong>Axis:</strong> <a href="https://www.cril.univ-artois.fr/axes/donnees/" target="_blank" style="color:var(--blue);text-decoration:none;">Data Learning &amp; Processing</a></span>
+            </div>
+            <div class="topic-list" style="margin-bottom:1rem;">
+              <span class="topic-chip">MeshGraphNets</span>
+              <span class="topic-chip">3D Mesh Pooling</span>
+              <span class="topic-chip">Graph Construction</span>
+              <span class="topic-chip">Temporal GNNs</span>
+              <span class="topic-chip">Fluid Simulation</span>
+              <span class="topic-chip">Physical Simulation</span>
+              <span class="topic-chip">Weather Modelling</span>
+              <span class="topic-chip">Medical 3D Images</span>
+            </div>
+            <a href="https://www.cril.univ-artois.fr/phds/arafat/" target="_blank" class="pub-link">View at CRIL →</a>
+            &nbsp;
+            <a href="https://adum.fr/as/ed/voirproposition.pl?site=adumR&matricule_prop=56440" target="_blank" class="pub-link">ADUM Listing →</a>
+          </div>
+        </div>
+      </div>
+
       <div class="research-card">
         <div class="research-icon">
           <svg viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="5" cy="12" r="2"/><line x1="5" y1="7" x2="5" y2="10"/><line x1="7" y1="5" x2="17" y2="5"/><line x1="19" y1="7" x2="14" y2="17"/><line x1="7" y1="12" x2="10" y2="12"/></svg>
         </div>
         <h3>Graph Neural Networks</h3>
-        <p>Advancing message-passing and graph-based representation learning for structured data. Exploring how graph architectures can capture relational and topological information in scientific domains.</p>
+        <p>Core PhD research area. Advancing GNNs for non-uniform 3D mesh data, with mesh-specific pooling strategies and scalable graph construction methods that surpass CNN limitations on irregular geometries.</p>
         <div class="topic-list">
           <span class="topic-chip">MeshGraphNets</span>
           <span class="topic-chip">Graph Transformers</span>
           <span class="topic-chip">Message Passing</span>
           <span class="topic-chip">Geometric Deep Learning</span>
-          <span class="topic-chip">Graph Representation</span>
+          <span class="topic-chip">Mesh Pooling</span>
         </div>
       </div>
 
@@ -805,6 +915,14 @@
     <div class="timeline fade-in">
 
       <div class="timeline-item">
+        <div class="timeline-dot" style="background:var(--accent);box-shadow:0 0 0 3px #bae6fd;"></div>
+        <div class="tl-period">2024 – Present &nbsp;<span style="background:var(--blue);color:white;font-family:var(--mono);font-size:0.65rem;padding:0.1rem 0.5rem;border-radius:100px;vertical-align:middle;">Current</span></div>
+        <div class="tl-role">PhD Researcher (Doctorant)</div>
+        <div class="tl-org"><a href="https://www.cril.univ-artois.fr/" target="_blank" style="color:var(--blue);text-decoration:none;">CRIL – Centre de Recherche en Informatique de Lens</a>, Université d'Artois, Lens, France</div>
+        <div class="tl-desc">Doctoral thesis: <em>"Apprentissage sur des objets 3D non-uniformes : une méthode basée sur les graphes"</em> (Learning on Non-Uniform 3D Objects: A Graph-Based Method). Supervised by <a href="https://www.cril.univ-artois.fr/members/jabbour/" target="_blank" style="color:var(--blue);">Prof. Saïd Jabbour</a> and co-supervised by <a href="https://www.cril.univ-artois.fr/members/inoubli/" target="_blank" style="color:var(--blue);">Dr. Wissem Inoubli</a>. Research on GNNs for 3D mesh learning, scalable pooling strategies, and temporal GNN applications in fluid simulation and weather modelling. Funded by Université d'Artois. Research axis: <a href="https://www.cril.univ-artois.fr/axes/donnees/" target="_blank" style="color:var(--blue);">Data Learning &amp; Processing</a>.</div>
+      </div>
+
+      <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="tl-period">April 2018 – Present</div>
         <div class="tl-role">Assistant Professor</div>
@@ -885,9 +1003,6 @@
           <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
         </div>
         
-      </div>
-
-      <div class="award-card">
         
         <div>
           <div class="award-title">Inter Disciplinary Debate Competition</div>
@@ -912,6 +1027,134 @@
       <div class="member-row"><span class="member-dot"></span>Member, Internet Society Bangladesh Dhaka Chapter</div>
       <div class="member-row"><span class="member-dot"></span>Member, JUST Teachers' Association, Jashore University of Science &amp; Technology, Bangladesh</div>
       <div class="member-row"><span class="member-dot"></span>Member, CSE Club, Dept. of Computer Science and Engineering, JUST, Bangladesh</div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- PEER REVIEW -->
+<section id="reviews">
+  <div class="container">
+    <p class="section-label">Service</p>
+    <h2 class="section-title">Peer Review Activity</h2>
+    <p class="section-sub">Contributing to the scientific community as a reviewer for international journals and conferences.</p>
+
+    <!-- Summary bar -->
+    <div class="review-summary-bar">
+      <div class="review-summary-item">
+        <div class="review-summary-num">7</div>
+        <div class="review-summary-lbl">Manuscripts Reviewed</div>
+      </div>
+      <div class="review-summary-divider"></div>
+      <div class="review-summary-item">
+        <div class="review-summary-num">3</div>
+        <div class="review-summary-lbl">Venues</div>
+      </div>
+      <div class="review-summary-divider"></div>
+      <div class="review-summary-item">
+        <div class="review-summary-num">2025</div>
+        <div class="review-summary-lbl">All in Year</div>
+      </div>
+      <div class="review-summary-divider"></div>
+      <div class="review-summary-desc">
+        Md Yasir Arafat serves as a peer reviewer for high-impact international journals and top-tier AI/ML conferences, including Springer's <em>Journal of Supercomputing</em>, <em>IJCIA</em>, and <em>IJCNN 2025</em>.
+      </div>
+    </div>
+
+    <div class="reviews-grid fade-in">
+
+      <!-- Card 1: Journal of Supercomputing -->
+      <div class="review-card">
+        <div class="review-card-header">
+          <div class="review-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="13" y2="13"/></svg>
+          </div>
+          <div>
+            <div class="review-venue">The Journal of Supercomputing</div>
+            <div class="review-venue-abbr">Springer · ISSN 0920-8542</div>
+          </div>
+        </div>
+        <div class="review-card-body">
+          <div class="review-stat">
+            <div class="review-count">3</div>
+            <div class="review-count-label">
+              <strong>Manuscripts Reviewed</strong>
+              International peer-reviewed journal
+            </div>
+          </div>
+          <div class="review-year-badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            2025
+          </div>
+          <div class="review-cert-note">
+            Recognised by certificate of contribution for reviewing 3 manuscripts in 2025.
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: IJCIA -->
+      <div class="review-card">
+        <div class="review-card-header">
+          <div class="review-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/><path d="M2 12h2M20 12h2M12 2v2M12 20v2"/></svg>
+          </div>
+          <div>
+            <div class="review-venue">International Journal of Computational Intelligence and Applications</div>
+            <div class="review-venue-abbr">IJCIA · World Scientific</div>
+          </div>
+        </div>
+        <div class="review-card-body">
+          <div class="review-stat">
+            <div class="review-count">1</div>
+            <div class="review-count-label">
+              <strong>Manuscript Reviewed</strong>
+              International peer-reviewed journal
+            </div>
+          </div>
+          <div class="review-year-badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            2025
+          </div>
+          <div class="review-cert-note">
+            Contributed 1 manuscript review in 2025 for this international computational intelligence journal.
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: IJCNN 2025 -->
+      <div class="review-card">
+        <div class="review-card-header">
+          <div class="review-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <div class="review-venue">International Joint Conference on Neural Networks 2025</div>
+            <div class="review-venue-abbr">IJCNN 2025 · IEEE · CMT</div>
+          </div>
+        </div>
+        <div class="review-card-body">
+          <div class="review-stat">
+            <div class="review-count">3</div>
+            <div class="review-count-label">
+              <strong>Articles Reviewed</strong>
+              Top-tier IEEE neural networks conference
+            </div>
+          </div>
+          <div class="review-year-badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            2025
+          </div>
+          <a href="https://cmt3.research.microsoft.com/IJCNN2025" target="_blank" class="review-link">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            CMT Portal →
+          </a>
+          <div class="review-cert-note">
+            Reviewed 3 conference articles for IJCNN 2025 via Microsoft CMT review system.
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -973,7 +1216,7 @@
   <div class="container">
     <p class="section-label">Contact</p>
     <h2 class="section-title">Get In Touch</h2>
-    <p class="section-sub">Open to research collaborations, academic discussions, and opportunities in AI research.</p>
+    <p class="section-sub">Open to research collaborations, academic discussions, and opportunities in GNN and AI research. Based in Lens, France.</p>
     <div class="contact-grid fade-in">
       <div>
         <div class="contact-links">
@@ -985,14 +1228,22 @@
             <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
             arafat.cse.just@gmail.com
           </a>
+          <a href="https://www.cril.univ-artois.fr/phds/arafat/" target="_blank" class="contact-link">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20"/></svg>
+            CRIL PhD Page — Université d'Artois
+          </a>
           <a href="https://just.edu.bd/t/arafatcse" target="_blank" class="contact-link">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
-            University Profile
+            JUST University Profile
           </a>
           <a href="https://www.researchgate.net/profile/Md-Arafat-3" target="_blank" class="contact-link">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h8M12 8v8"/></svg>
             ResearchGate
           </a>
+          <div class="contact-link" style="cursor:default;opacity:0.7;">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Lens, Hauts-de-France, France
+          </div>
         </div>
       </div>
       <div class="contact-form-wrap">
@@ -1015,7 +1266,7 @@
 </section>
 
 <footer>
-  <span>© 2025 Md Yasir Arafat · Jashore University of Science and Technology · Built for GitHub Pages</span>
+  <span>© 2025 Md Yasir Arafat · PhD Researcher, CRIL – Université d'Artois, France · Assistant Professor, JUST, Bangladesh · Built for GitHub Pages</span>
 </footer>
 
 <script>
