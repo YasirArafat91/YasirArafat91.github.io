@@ -305,6 +305,41 @@
   .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+  /* ── TALKS & CONFERENCES ── */
+  #talks { background: var(--white); }
+  .talks-year-group { margin-bottom: 2.5rem; }
+  .talks-year-heading {
+    font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
+    color: var(--blue); letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.35rem 0.75rem; background: var(--blue-light);
+    border: 1px solid #c0d2f7; border-radius: 4px;
+    display: inline-block; margin-bottom: 1.25rem;
+  }
+  .talks-subheading {
+    font-size: 0.8rem; font-weight: 600; color: var(--ink-muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .talk-item {
+    display: flex; gap: 1.25rem; padding: 1.1rem 1.25rem;
+    border: 1px solid var(--rule); border-radius: 10px;
+    background: var(--white); margin-bottom: 0.75rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .talk-item:hover { box-shadow: 0 4px 20px rgba(26,79,173,0.09); transform: translateY(-2px); }
+  .talk-type-badge {
+    font-family: var(--mono); font-size: 0.65rem; color: white;
+    padding: 0.2rem 0.55rem; border-radius: 100px; white-space: nowrap;
+    align-self: flex-start; flex-shrink: 0; margin-top: 2px;
+  }
+  .talk-type-badge.event { background: #6366f1; }
+  .talk-type-badge.conference { background: var(--blue); }
+  .talk-type-badge.poster { background: #0891b2; }
+  .talk-title { font-size: 0.97rem; font-weight: 600; color: var(--ink); line-height: 1.4; margin-bottom: 0.25rem; }
+  .talk-meta { font-size: 0.83rem; color: var(--ink-soft); margin-bottom: 0.15rem; }
+  .talk-date { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-muted); }
+
   /* ── PEER REVIEW ── */
   #reviews { background: var(--white); }
   .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; }
@@ -376,6 +411,7 @@
     <li><a href="#publications">Publications</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#talks">Talks</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -411,7 +447,7 @@
         </div>
         <div class="stats-row">
           <div class="stat-item">
-            <div class="stat-num">6</div>
+            <div class="stat-num">7</div>
             <div class="stat-label">Publications</div>
           </div>
           <div class="stat-item">
@@ -671,6 +707,7 @@
 
     <div class="pub-filters" id="pubFilters">
       <button class="filter-btn active" data-year="all">All Years</button>
+      <button class="filter-btn" data-year="2026">2026</button>
       <button class="filter-btn" data-year="2025">2025</button>
       <button class="filter-btn" data-year="2023">2023</button>
       <button class="filter-btn" data-year="2022">2022</button>
@@ -681,8 +718,24 @@
 
     <div class="pub-list fade-in" id="pubList">
 
-      <div class="pub-card" data-year="2025">
+      <div class="pub-card" data-year="2026">
         <span class="pub-num">01</span>
+        <div>
+          <div class="pub-title">A Machine Learning-Driven IoT-Enabled Activity Monitoring System for Chronic Disease Prediction and Personalized Diet Planning</div>
+          <div class="pub-authors">Md Yasir Arafat et al.</div>
+          <div class="pub-venue">ICETSD 2026 — International Conference on Emerging Technology in Science and Development, JUST, Bangladesh</div>
+          <div class="pub-links">
+            <span class="pub-year-tag">2026</span>
+            <a class="pub-link" href="https://icetsd.just.edu.bd/" target="_blank">Conference →</a>
+            <span class="pub-year-tag" style="background:var(--blue-light);color:var(--blue);border-color:#c0d2f7;">Poster</span>
+            <span class="pub-year-tag" style="background:var(--blue-light);color:var(--blue);border-color:#c0d2f7;">IoT</span>
+            <span class="pub-year-tag" style="background:var(--blue-light);color:var(--blue);border-color:#c0d2f7;">Machine Learning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-year="2025">
+        <span class="pub-num">02</span>
         <div>
           <div class="pub-title">An Efficient Convolution Neural Network-based Novel Framework for Potato Leaf Diseases Classification and Identification</div>
           <div class="pub-authors">Md Yasir Arafat, Sawrnali Khatun, Monishanker Halder, Mohammad Nowsin Amin Sheikh, Md Nasim Adnan, Sk Shalauddin Kabir</div>
@@ -696,7 +749,7 @@
       </div>
 
       <div class="pub-card" data-year="2023">
-        <span class="pub-num">02</span>
+        <span class="pub-num">03</span>
         <div>
           <div class="pub-title">Automatic Text Summarization Based on Extractive-Abstractive Method</div>
           <div class="pub-authors">Md. Ahsan Habib, Romana Rahman Ema, Tajul Islam, Md. Yasir Arafat, Mahedi Hasan</div>
@@ -710,7 +763,7 @@
       </div>
 
       <div class="pub-card" data-year="2022">
-        <span class="pub-num">03</span>
+        <span class="pub-num">04</span>
         <div>
           <div class="pub-title">Protein Secondary Structure Prediction Using Hybrid Recurrent Neural Networks</div>
           <div class="pub-authors">Romana Rahman Ema, A. Khatun, M. A. Hossain, Mostafijur Rahman Akhond, Nazmul Hossain, Md. Yasir Arafat</div>
@@ -725,7 +778,7 @@
       </div>
 
       <div class="pub-card" data-year="2017">
-        <span class="pub-num">04</span>
+        <span class="pub-num">05</span>
         <div>
           <div class="pub-title">Technical Challenges of Cloud Forensics and Suggested Solutions</div>
           <div class="pub-authors">Md. Yasir Arafat, Bipasha Mondal, Sreeti Rani</div>
@@ -738,7 +791,7 @@
       </div>
 
       <div class="pub-card" data-year="2016">
-        <span class="pub-num">05</span>
+        <span class="pub-num">06</span>
         <div>
           <div class="pub-title">JUSTCE: A Secured and Reliable E-Learning Portal</div>
           <div class="pub-authors">Md. Kamrul Islam, Md. Yasir Arafat, Ahsan-Ul Ambia</div>
@@ -750,7 +803,7 @@
       </div>
 
       <div class="pub-card" data-year="2014">
-        <span class="pub-num">06</span>
+        <span class="pub-num">07</span>
         <div>
           <div class="pub-title">Redundant Reduced LZW (RRLZW) Technique of Lossless Data Compression</div>
           <div class="pub-authors">Md. Kamrul Islam, Md. Yasir Arafat</div>
@@ -1016,6 +1069,82 @@
 
 <hr class="rule">
 
+<!-- TALKS & CONFERENCES -->
+<section id="talks">
+  <div class="container">
+    <p class="section-label">Dissemination</p>
+    <h2 class="section-title">Talks &amp; Conferences</h2>
+    <p class="section-sub">Presentations, poster sessions, and conference participations in the research community.</p>
+
+    <div class="fade-in">
+
+      <!-- 2026 -->
+      <div class="talks-year-group">
+        <div class="talks-year-heading">2026</div>
+        <p class="talks-subheading">Conferences</p>
+
+        <div class="talk-item">
+          <span class="talk-type-badge poster">Poster</span>
+          <div>
+            <div class="talk-title">A Machine Learning-Driven IoT-Enabled Activity Monitoring System for Chronic Disease Prediction and Personalized Diet Planning</div>
+            <div class="talk-meta"><a href="https://icetsd.just.edu.bd/" target="_blank" style="color:var(--blue);text-decoration:none;">ICETSD 2026 — International Conference on Emerging Technology in Science and Development</a>, JUST, Bangladesh</div>
+            <div class="talk-date">2026</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2025 -->
+      <div class="talks-year-group">
+        <div class="talks-year-heading">2025</div>
+
+        <p class="talks-subheading">Events</p>
+
+        <div class="talk-item">
+          <span class="talk-type-badge event">Talk</span>
+          <div>
+            <div class="talk-title">Scalable Graph Representation Learning</div>
+            <div class="talk-meta">MAIA IA-Optim Workshop</div>
+            <div class="talk-date">4 June 2025</div>
+          </div>
+        </div>
+
+        <div class="talk-item">
+          <span class="talk-type-badge event">Talk</span>
+          <div>
+            <div class="talk-title">Thesis Hypothesis Presentation</div>
+            <div class="talk-meta">JDD25 — Journée des Doctorants · Engaging with peers and experts in computer science</div>
+            <div class="talk-date">17 June 2025</div>
+          </div>
+        </div>
+
+        <p class="talks-subheading">Conferences</p>
+
+        <div class="talk-item">
+          <span class="talk-type-badge poster">Poster</span>
+          <div>
+            <div class="talk-title">Learning 3D Molecular Representation: A Graph Transformer Approach</div>
+            <div class="talk-meta">2SIC Conference — UPJV, Amiens</div>
+            <div class="talk-date">10–12 July 2025</div>
+          </div>
+        </div>
+
+        <div class="talk-item">
+          <span class="talk-type-badge conference">Abstract</span>
+          <div>
+            <div class="talk-title">Scalable Graph Neural Network for Learning Mesh Graphs</div>
+            <div class="talk-meta">NCCIA-2025 — National Conference on Computing and Information Automation, JUST, Jashore, Bangladesh</div>
+            <div class="talk-date">20 June 2025</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
 <!-- MEMBERSHIPS -->
 <section id="memberships">
   <div class="container">
@@ -1267,7 +1396,7 @@
 </section>
 
 <footer>
-  <span>© 2025 Md Yasir Arafat · PhD Researcher, CRIL – Université d'Artois, France · Assistant Professor, JUST, Bangladesh · Built for GitHub Pages</span>
+  <span>© 2026 Md Yasir Arafat · PhD Researcher, CRIL – Université d'Artois, France · Assistant Professor, JUST, Bangladesh · Built for GitHub Pages</span>
 </footer>
 
 <script>
